@@ -13,7 +13,7 @@ else()
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Ofast -fsized-deallocation -Werror")
 endif()
 
-add_library(utils STATIC lib/error.h src/error.cpp)
+add_library(utils STATIC lib/error.h src/error.cpp lib/meta/concepts.h lib/interface/service_provider.h lib/service_container.h lib/interface/service_collection.h src/service_container.cpp)
 target_include_directories(utils PUBLIC lib)
 
 add_subdirectory(example)
